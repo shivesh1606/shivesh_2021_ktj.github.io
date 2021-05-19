@@ -164,18 +164,23 @@ animation: reveal 3000ms ease-in-out forwards 200ms,
     font-size: 4rem;
     z-index: 50;
     width: 100%;
-    
     position: relative;
-    font-family: 'Niramit', sans-serif;
+    font-family: 'Satisfy', cursive;
     margin-bottom: -6px;
-    text-shadow: 2px 2px 50px black;
 
+    
+
+}
+.intro #heading
+{
+    font-family: 'Niramit', sans-serif;
+    text-shadow: none;
 }
 #subtitle
 {
     font-size: 2rem;
     z-index: 50;
-    position: relative;
+    color: whitesmoke;
 }
 .intro .cover img:hover {
   
@@ -230,7 +235,7 @@ section::before
     width: 100vw;
     margin-top:5%; 
     align-items: center;
-    margin: 30px 0;
+        margin-top:5%; 
 }
 .special .container
 {
@@ -238,8 +243,10 @@ section::before
 }
 .special .container .card
 {
-     height: 300px;
-    width: 28%;
+    position: relative;
+    top:-50px;
+    height: 300px;
+    width: 30%;
     display: flex;
     background: pink;
     align-content: flex-end;
@@ -247,14 +254,18 @@ section::before
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
     background: white;
     justify-content: flex-end;
-    transition: 0.3s;
-    
+    transition: 0.5s;
+    background:  linear-gradient(black,#141e30, #243b55)rgba(0,0,0,.1);
 }
 .special .container .card .img
 {
     height: 100%;
     z-index: 4;
     background: yellow;
+    position: relative;
+    top: 200px;
+    transition: 0.3s;
+    flex-shrink: 1;
     
 }
 .special .container .card .img img
@@ -268,13 +279,20 @@ section::before
 
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2); 
     transform: scale(1.1);
+    transform: translateY(50px);
 
+}
+.special .container .card:hover .img
+{
+    transform: translateY(-200px);
 }
 .special .container .card .text
 {
     display: flex;
     flex-direction: column;
     padding: 5px 5px;
+    
+    max-height: 300px;
     
     
 }
@@ -290,7 +308,6 @@ section::before
     display: flex;
     justify-content: space-between;
     padding: 0 20px 10px 20px;
-  background: white;
   opacity: 0;
  visibility: hidden;
   transition: 0.1s;
@@ -311,7 +328,7 @@ section::before
 {
     font-size:1.4rem;
     font-weight: 600;
-    color: #202020;
+    color: whitesmoke;
 }
 .container .row .Veg img
 {
@@ -325,7 +342,6 @@ section::before
   color: #e74c3c;
   line-height: 1.2em;
     padding: 10px 5px;
-    padding-bottom: 
     overflow: hidden;
 
 }
@@ -750,5 +766,68 @@ animation: reveal 3000ms ease-in-out forwards 200ms,
     object-fit: cover;
     width: 40%;
 }
+.fa-smile
+{
+    color: #fdca40; 
+    //transform: 0.5s ease-out;
+    //animation: animate1 2s linear infinite;
+}
+@keyframes animate1
+{
+    
+    0%{
+        transform: rotateZ(00deg);
+    }
+    50%
+    {
+        transform: rotateZ(180deg);
+    }
+    100%
+    {
+        transform: rotateZ(360deg);
+    }
+}
+.form .login-box h2:hover .fa-smile
+{
+    animation: animate1 1.5s linear ;
+}
+@media only screen and (max-width: 1270px) {
+ 
+    body
+    {
+        overflow-x: visible;
+        text-align: center;
+    }
+   
+    .special .container
+    {
+        flex-direction: column;
+        margin: 70px 0;
+    }
+    .special .container .card
+    {
+        margin: 65px 0; 
+        width: 300px;
+        height: 305px;    }
+    .intro
+    {
+        margin-top: 50px
+    }
+    .intro .name
+    {
+        width: 100vw;
+        padding: 0 0;
+    }
+    .intro .cover
+    {
+        position: absolute;
+        width:100%;
+        opacity: 0.4;
+    }
+    .intro .cover .name
+    {
+        text-align: center;
+    }
 
+}
 
